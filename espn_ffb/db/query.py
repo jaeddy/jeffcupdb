@@ -214,12 +214,6 @@ class Query:
           (select count(1) from sackos where owner_id = r.owner_id) as sackos
         from
           records r
-        where 
-          r.owner_id not in (
-            '{{1A60AF89-3822-4F74-8357-D84FFF3F59B1}}', 
-            '{{66A311B1-8601-40D7-85C3-9EE3321733C3}}',
-            '{{BF737AE9-7E0D-4961-A033-74559FB9F6AC}}'
-          )
         group by
           r.owner_id
         order by
