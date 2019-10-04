@@ -1,5 +1,7 @@
 def get_db_uri(user, password, host, port, dbname):
     return f"postgresql://{user}:{password}@{host}:{port}/{dbname}"
+    # return f"mysql://{user}:{password}@{host}:{port}/{dbname}"
+    # return f"oracle://{user}:{password}@{host}:{port}/{dbname}"
 
 
 class Config(object):
