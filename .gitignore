@@ -1,0 +1,10 @@
+*__pycache__/
+.idea/
+.gradle/
+build/
+venv/
+.DS_Store
+*.log
+
+test.html
+test.py
