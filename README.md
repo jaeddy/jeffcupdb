@@ -3,7 +3,7 @@ espn-ffb is a project to query fantasy football data from ESPN's API and persist
 
 #### Pre-requisites:
 *  Python3
-*  Database
+*  Database supported by [SQLAlchemy](https://docs.sqlalchemy.org/en/13/core/engines.html) (tested with PostgreSQL)
 *  uWSGI (optional, but recommended if running in production)
 
 ## Requirements:
