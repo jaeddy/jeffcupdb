@@ -29,27 +29,31 @@ class Config(object):
 class DevConfig(Config):
     config_dir = "conf"
 
-    user = os.environ.get('DB_USER')
-    password = os.environ.get('DB_PASSWORD')
-    host = os.environ.get('DB_HOST')
-    port = os.environ.get('DB_PORT')
-    dbname = os.environ.get('DB_NAME')
+    DB_URI = os.environ.get('DB_URI')
+    if not DB_URI:
+        user = os.environ.get('DB_USER')
+        password = os.environ.get('DB_PASSWORD')
+        host = os.environ.get('DB_HOST')
+        port = os.environ.get('DB_PORT')
+        dbname = os.environ.get('DB_NAME')
+
+        DB_URI = get_db_uri(user=user, password=password, host=host, port=port, dbname=dbname)
 
     log_base_dir = "log"
     # console_level = 10
 
-    DB_URI = get_db_uri(user=user, password=password, host=host, port=port, dbname=dbname)
 
 
 class ProdConfig(Config):
     config_dir = "/etc/opt/espn-ffb"
 
-    user = os.environ.get('DB_USER')
-    password = os.environ.get('DB_PASSWORD')
-    host = os.environ.get('DB_HOST')
-    port = os.environ.get('DB_PORT')
-    dbname = os.environ.get('DB_NAME')
+    if not DB_URI:
+        user = os.environ.get('DB_USER')
+        password = os.environ.get('DB_PASSWORD')
+        host = os.environ.get('DB_HOST')
+        port = os.environ.get('DB_PORT')
+        dbname = os.environ.get('DB_NAME')
+
+        DB_URI = get_db_uri(user=user, password=password, host=host, port=port, dbname=dbname)
 
     log_base_dir = "/var/log/espn-ffb"
-
-    DB_URI = get_db_uri(user=user, password=password, host=host, port=port, dbname=dbname)
