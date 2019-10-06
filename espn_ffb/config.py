@@ -47,6 +47,7 @@ class DevConfig(Config):
 class ProdConfig(Config):
     config_dir = "/etc/opt/espn-ffb"
 
+    DB_URI = os.environ.get('DB_URI')
     if not DB_URI:
         user = os.environ.get('DB_USER')
         password = os.environ.get('DB_PASSWORD')
