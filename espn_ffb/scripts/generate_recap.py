@@ -24,8 +24,6 @@ RECAP_TEMPLATE = """        {{#- {{{{ r.team }}}} = "{team_name}" -#}}
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Generates weekly recap templates.")
-    parser.add_argument('-e', '--environment', help="The development environment", type=str, required=True,
-                        choices={"dev", "prod"})
     parser.add_argument('-w', '--week', help="The season week", type=int, required=True)
     parser.add_argument('-y', '--year', help="The season year", type=int, required=True)
     return vars(parser.parse_args())
@@ -48,11 +46,10 @@ def generate_recap_template(filename, team_name, opponent_name):
 
 def main():
     args = parse_args()
-    environment = args.get("environment")
     year = args.get("year")
     week = args.get("week")
 
-    app.config.from_object(util.get_config(environment))
+    app.config.from_object(util.get_config())
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     app.config['SQLALCHEMY_DATABASE_URI'] = app.config.get("DB_URI")
     db.init_app(app)

@@ -21,7 +21,7 @@ import sys
 LOG_FORMAT = "%(asctime)s %(levelname)s %(pathname)s %(lineno)d: %(message)s"
 
 app = Flask(__name__)
-app.config.from_object(util.get_config(sys.argv[2]))
+app.config.from_object(util.get_config())
 app.register_blueprint(awards)
 app.register_blueprint(champions)
 app.register_blueprint(h2h_records)

@@ -20,8 +20,6 @@ def parse_args() -> Mapping:
     :return: dict of parsed arguments
     """
     parser = argparse.ArgumentParser(description="Update matchups, records, and teams")
-    parser.add_argument('-e', '--environment', help="The development environment", type=str, required=True,
-                        choices={"dev", "prod"})
     return vars(parser.parse_args())
 
 
@@ -140,9 +138,8 @@ def update_teams(query: Query, current_teams: Set[Teams], teams: Set[Teams]):
 
 def main():
     args = parse_args()
-    environment = args.get("environment")
-    config = util.get_config(environment)
-    app.config.from_object(util.get_config(environment))
+    config = util.get_config()
+    app.config.from_object(util.get_config())
     util.set_logger(config=config, filename=__file__)
 
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False

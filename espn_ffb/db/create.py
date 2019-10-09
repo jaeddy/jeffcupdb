@@ -17,17 +17,14 @@ def parse_args() -> Mapping:
     """
     parser = argparse.ArgumentParser(
         description="Create tables and insert into database.")
-    parser.add_argument('-e', '--environment', help="The development environment", type=str, required=True,
-                        choices={"dev", "prod"})
     return vars(parser.parse_args())
 
 
 # noinspection DuplicatedCode
 def main():
     args = parse_args()
-    environment = args.get("environment")
-    config = util.get_config(environment)
-    app.config.from_object(util.get_config(environment))
+    config = util.get_config()
+    app.config.from_object(util.get_config())
     util.set_logger(config=config, filename=__file__)
 
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False

@@ -1,4 +1,4 @@
-from espn_ffb.config import Config, DevConfig, ProdConfig
+from espn_ffb.config import Config, EnvConfig
 from collections import namedtuple
 import logging.handlers
 import os
@@ -21,17 +21,13 @@ def get_is_current_year(current_year: int, season_id: int):
     return season_id == current_year
 
 
-def get_config(environment) -> Type[Config]:
+def get_config() -> Type[Config]:
     """
     Get a config object for a given environment.
 
-    :param environment: the development environment
     :return: the config object
     """
-    if environment == "dev":
-        return DevConfig
-    elif environment == "prod":
-        return ProdConfig
+    return EnvConfig
 
 
 def convert(name):
