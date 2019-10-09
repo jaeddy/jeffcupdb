@@ -1,2 +1,2 @@
-web: `python -m espn_ffb.app -e dev`
-release: `python -m espn_ffb.setup -e dev`
+web: gunicorn espn_ffb.app:app
+release: `python -m espn_ffb.setup`
