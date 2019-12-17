@@ -1,6 +1,6 @@
 # espn-ffb
 espn-ffb is a project to query fantasy football data from ESPN's API and persist it in your own database. There is a very basic web component with a few views built using Flask that allows you to self-host your own fantasy football league page for things such as historical records, weekly recaps, etc.
- 
+  
 #### Pre-requisites:
 *  [Python3](https://www.python.org/download/releases/3.0/)
 *  [PostgreSQL](https://www.postgresql.org/download/)
