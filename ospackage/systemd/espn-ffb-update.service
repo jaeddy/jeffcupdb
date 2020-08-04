@@ -1,10 +1,10 @@
 [Unit]
-Description=Updates espn-ffb database
+Description=Updates jeffcupdb database
 Wants=network-online.target
 After=network-online.target
 
 [Service]
-WorkingDirectory=/opt/espn-ffb
+WorkingDirectory=/opt/jeffcupdb
 ExecStart=/usr/bin/python3 -m jeffcupdb.db.update -e prod
 
 [Install]

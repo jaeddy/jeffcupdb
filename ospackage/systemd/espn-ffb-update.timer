@@ -1,5 +1,5 @@
 [Unit]
-Description=Run espn-ffb-update.service every Tuesday
+Description=Run jeffcupdb-update.service every Tuesday
 
 [Timer]
 OnCalendar=Tue 4..8:00

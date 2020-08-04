@@ -3,7 +3,7 @@ import java.time.format.DateTimeFormatter
 import org.ajoberstar.grgit.Grgit
 import org.redline_rpm.header.Os
 
-group = "espn-ffb"
+group = "jeffcupdb"
 version = "0.0.1-SNAPSHOT"
 
 val buildNumber: String by project
