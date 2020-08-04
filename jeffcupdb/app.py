@@ -1,19 +1,19 @@
-from espn_ffb import util
-from espn_ffb.db.database import db
-from espn_ffb.db.model.champions import Champions
-from espn_ffb.db.model.matchups import Matchups
-from espn_ffb.db.model.owners import Owners
-from espn_ffb.db.model.records import Records
-from espn_ffb.db.model.sackos import Sackos
-from espn_ffb.db.model.teams import Teams
-from espn_ffb.db.query import Query
-from espn_ffb.views.awards import awards
-from espn_ffb.views.champions import champions
-from espn_ffb.views.h2h_records import h2h_records
-from espn_ffb.views.matchup_history import matchup_history
-from espn_ffb.views.playoffs import playoffs
-from espn_ffb.views.recap import recap
-from espn_ffb.views.standings import standings
+from jeffcupdb import util
+from jeffcupdb.db.database import db
+from jeffcupdb.db.model.champions import Champions
+from jeffcupdb.db.model.matchups import Matchups
+from jeffcupdb.db.model.owners import Owners
+from jeffcupdb.db.model.records import Records
+from jeffcupdb.db.model.sackos import Sackos
+from jeffcupdb.db.model.teams import Teams
+from jeffcupdb.db.query import Query
+from jeffcupdb.views.awards import awards
+from jeffcupdb.views.champions import champions
+from jeffcupdb.views.h2h_records import h2h_records
+from jeffcupdb.views.matchup_history import matchup_history
+from jeffcupdb.views.playoffs import playoffs
+from jeffcupdb.views.recap import recap
+from jeffcupdb.views.standings import standings
 from flask import Flask, redirect
 import logging
 import sys

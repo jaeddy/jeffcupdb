@@ -1,10 +1,10 @@
-from espn_ffb.config import Config
-from espn_ffb.db.model.matchups import Matchups
-from espn_ffb.db.model.owners import Owners
-from espn_ffb.db.model.records import Records
-from espn_ffb.db.model.teams import Teams
-from espn_ffb.espn.model.league_setting import LeagueSetting
-from espn_ffb.espn.model.matchup_score import MatchupScore
+from jeffcupdb.config import Config
+from jeffcupdb.db.model.matchups import Matchups
+from jeffcupdb.db.model.owners import Owners
+from jeffcupdb.db.model.records import Records
+from jeffcupdb.db.model.teams import Teams
+from jeffcupdb.espn.model.league_setting import LeagueSetting
+from jeffcupdb.espn.model.matchup_score import MatchupScore
 import requests
 from typing import List, Mapping, Sequence, Type
 

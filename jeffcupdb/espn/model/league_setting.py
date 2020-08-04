@@ -1,8 +1,8 @@
-from espn_ffb import util
-from espn_ffb.config import Config
-from espn_ffb.espn.model.matchup_score import MatchupScore
-from espn_ffb.espn.model.member import Member
-from espn_ffb.espn.model.team import Team
+from jeffcupdb import util
+from jeffcupdb.config import Config
+from jeffcupdb.espn.model.matchup_score import MatchupScore
+from jeffcupdb.espn.model.member import Member
+from jeffcupdb.espn.model.team import Team
 import requests
 from typing import Type
 

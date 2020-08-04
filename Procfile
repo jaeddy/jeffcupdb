@@ -1,2 +1,2 @@
-web: gunicorn espn_ffb.app:app
-release: `python -m espn_ffb.setup`
+web: gunicorn jeffcupdb.app:app
+release: `python -m jeffcupdb.setup`

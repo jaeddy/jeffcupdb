@@ -1,14 +1,14 @@
 import argparse
-from espn_ffb import util
-from espn_ffb.db.database import db
+from jeffcupdb import util
+from jeffcupdb.db.database import db
 from flask import Flask
 import os
-from espn_ffb.db.query import Query
+from jeffcupdb.db.query import Query
 
 app = Flask(__name__)
 
 HTML_EXTENSION = ".html"
-RECAP_TEMPLATE_DIR = "espn_ffb/templates/recap/{year}/{week}"
+RECAP_TEMPLATE_DIR = "jeffcupdb/templates/recap/{year}/{week}"
 
 RECAP_TEMPLATE = """        {{#- {{{{ r.team }}}} = "{team_name}" -#}}
         {{#- {{{{ r.opponent }}}} = "{opponent_name}" #}}

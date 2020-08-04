@@ -1,7 +1,7 @@
 import argparse
-from espn_ffb import util
-from espn_ffb.db import create, insert
-from espn_ffb.db.database import db
+from jeffcupdb import util
+from jeffcupdb.db import create, insert
+from jeffcupdb.db.database import db
 from flask import Flask
 from typing import Mapping
 

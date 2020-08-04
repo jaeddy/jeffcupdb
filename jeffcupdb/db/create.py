@@ -1,8 +1,8 @@
 import argparse
-from espn_ffb import util
-from espn_ffb.db.database import db
+from jeffcupdb import util
+from jeffcupdb.db.database import db
 # noinspection PyUnresolvedReferences
-from espn_ffb.db.model import champions, matchups, owners, records, sackos, teams
+from jeffcupdb.db.model import champions, matchups, owners, records, sackos, teams
 from flask import Flask
 import logging
 from typing import Mapping

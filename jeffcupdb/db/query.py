@@ -1,10 +1,10 @@
 from collections import namedtuple
-from espn_ffb.db.model.champions import Champions
-from espn_ffb.db.model.matchups import Matchups
-from espn_ffb.db.model.owners import Owners
-from espn_ffb.db.model.records import Records
-from espn_ffb.db.model.sackos import Sackos
-from espn_ffb.db.model.teams import Teams
+from jeffcupdb.db.model.champions import Champions
+from jeffcupdb.db.model.matchups import Matchups
+from jeffcupdb.db.model.owners import Owners
+from jeffcupdb.db.model.records import Records
+from jeffcupdb.db.model.sackos import Sackos
+from jeffcupdb.db.model.teams import Teams
 from sqlalchemy import desc
 from sqlalchemy.dialects.postgresql import insert as pg_insert
 from typing import Sequence

@@ -1,12 +1,16 @@
-from espn_ffb.db.database import db
+from jeffcupdb.db.database import db
 
 
-class Sackos(db.Model):
-    PKEY_NAME = "sackos_year_pkey"
+class Teams(db.Model):
+    PKEY_NAME = "teams_year_id_pkey"
 
     year = db.Column(db.Integer, nullable=False)
+    id = db.Column(db.Integer, nullable=False)
     owner_id = db.Column(db.String, nullable=False)
-    db.PrimaryKeyConstraint(year, name=PKEY_NAME)
+    abbreviation = db.Column(db.String, nullable=False)
+    location = db.Column(db.String, nullable=False)
+    nickname = db.Column(db.String, nullable=False)
+    db.PrimaryKeyConstraint(year, id, name=PKEY_NAME)
 
     def __str__(self):
         return ', '.join("%s: %s" % item for item in vars(self).items() if "_json" not in item)
@@ -17,7 +21,11 @@ class Sackos(db.Model):
     def __key(self):
         return (
             self.year,
-            self.owner_id
+            self.id,
+            self.owner_id,
+            self.abbreviation,
+            self.location,
+            self.nickname
         )
 
     def __hash__(self):
@@ -29,7 +37,11 @@ class Sackos(db.Model):
     def as_dict(self):
         return {
             'year': self.year,
-            'owner_id': self.owner_id
+            'id': self.id,
+            'owner_id': self.owner_id,
+            'abbreviation': self.abbreviation,
+            'location': self.location,
+            'nickname': self.nickname
         }
 
     def props_dict(self):

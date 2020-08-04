@@ -1,5 +1,5 @@
 from flask import Blueprint, current_app, render_template, request
-from espn_ffb import util
+from jeffcupdb import util
 
 matchup_history = Blueprint("matchup_history", __name__, template_folder="templates")
 TABLE_HEADERS = ["Year", "Matchup ID", "Team", "Opponent Score", "Result"]

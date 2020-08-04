@@ -1,4 +1,4 @@
-from espn_ffb import util
+from jeffcupdb import util
 import pprint
 from typing import Mapping
 

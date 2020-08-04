@@ -1,5 +1,5 @@
 from flask import Blueprint, current_app, render_template
-from espn_ffb import util
+from jeffcupdb import util
 
 recap = Blueprint("recap", __name__, template_folder="templates")
 

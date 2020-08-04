@@ -1,4 +1,4 @@
-from espn_ffb.db.database import db
+from jeffcupdb.db.database import db
 
 
 class Owners(db.Model):

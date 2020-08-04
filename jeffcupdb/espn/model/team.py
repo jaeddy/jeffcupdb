@@ -1,5 +1,5 @@
-from espn_ffb import util
-from espn_ffb.espn.model.record import Record
+from jeffcupdb import util
+from jeffcupdb.espn.model.record import Record
 import pprint
 from typing import Mapping
 

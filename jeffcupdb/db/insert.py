@@ -1,14 +1,14 @@
 import argparse
-from espn_ffb import util
-from espn_ffb.db.database import db
-from espn_ffb.db.model.champions import Champions
-from espn_ffb.db.model.matchups import Matchups
-from espn_ffb.db.model.owners import Owners
-from espn_ffb.db.model.records import Records
-from espn_ffb.db.model.sackos import Sackos
-from espn_ffb.db.model.teams import Teams
-from espn_ffb.espn import api
-from espn_ffb.espn.model.league_setting import LeagueSetting
+from jeffcupdb import util
+from jeffcupdb.db.database import db
+from jeffcupdb.db.model.champions import Champions
+from jeffcupdb.db.model.matchups import Matchups
+from jeffcupdb.db.model.owners import Owners
+from jeffcupdb.db.model.records import Records
+from jeffcupdb.db.model.sackos import Sackos
+from jeffcupdb.db.model.teams import Teams
+from jeffcupdb.espn import api
+from jeffcupdb.espn.model.league_setting import LeagueSetting
 from flask import Flask
 import logging
 from sqlalchemy import desc, func

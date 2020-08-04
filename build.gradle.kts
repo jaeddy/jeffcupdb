@@ -37,12 +37,12 @@ ospackage {
 
     packageName = project.name
 
-    val packageDir = "$projectDir/espn_ffb"
+    val packageDir = "$projectDir/jeffcupdb"
     val localConfigDir = "$projectDir/conf"
     val localSystemdDir = "$projectDir/ospackage/systemd"
     val controlDir = "$projectDir/ospackage/scripts"
 
-    val deployDir = "/opt/$packageName/espn_ffb"
+    val deployDir = "/opt/$packageName/jeffcupdb"
     val configDir = "/etc/opt/$packageName"
     val systemdDir = "/usr/lib/systemd/system"
 

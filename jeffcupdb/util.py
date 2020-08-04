@@ -1,4 +1,4 @@
-from espn_ffb.config import Config, EnvConfig
+from jeffcupdb.config import Config, EnvConfig
 from collections import namedtuple
 import logging.handlers
 import os

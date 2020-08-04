@@ -1,8 +1,8 @@
-from espn_ffb.db.database import db
+from jeffcupdb.db.database import db
 
 
-class Champions(db.Model):
-    PKEY_NAME = "champions_year_pkey"
+class Sackos(db.Model):
+    PKEY_NAME = "sackos_year_pkey"
 
     year = db.Column(db.Integer, nullable=False)
     owner_id = db.Column(db.String, nullable=False)
