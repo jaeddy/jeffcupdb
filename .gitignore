@@ -111,8 +111,7 @@ envvars*
 /site
 
 # mypy
-<<<<<<< HEAD
 .mypy_cache/
-=======
-.mypy_cache/
->>>>>>> 2d70a4cb34d0163dfcc62325b753eeb3eea798b2
+
+# Server logs
+*.log.*
