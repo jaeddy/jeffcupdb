@@ -1,0 +1,11 @@
+[Unit]
+Description=Starts jeffcupdb Flask app
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+WorkingDirectory=/opt/jeffcupdb
+ExecStart=/usr/local/bin/uwsgi --ini /etc/opt/jeffcupdb/jeffcupdb-prod.ini
+
+[Install]
+WantedBy=default.target

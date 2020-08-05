@@ -1,1 +1,1 @@
-rootProject.name = "espn-ffb"
+rootProject.name = "jeffcupdb"

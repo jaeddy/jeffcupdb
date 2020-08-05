@@ -2,7 +2,7 @@
 
 echo "Reloading daemon"
 systemctl daemon-reload
-echo "Restarting espn-ffb.service"
-systemctl restart espn-ffb.service
-echo "Restarting espn-ffb-update.timer"
-systemctl restart espn-ffb-update.timer
+echo "Restarting jeffcupdb.service"
+systemctl restart jeffcupdb.service
+echo "Restarting jeffcupdb-update.timer"
+systemctl restart jeffcupdb-update.timer
