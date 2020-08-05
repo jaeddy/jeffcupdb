@@ -4,47 +4,6 @@ This codebase was forked from [**espn-ffb**](https://gitlab.com/raphattack/espn-
 
 The Jefferson Cup is a long running fantasy league among UVA alumns and friends. This project builds on and customizes the **espn-ffb** application to provide an interactive interface for exploring current and historical Jeff Cup league data.
 
-*This repo will be evolving dramatically over the next several weeks/months, so any of the documentation below should be approached with caution.*
+*This repo will be evolving dramatically over the next several weeks/months — better documentation for usage and contribution should follow.*
 
-#### Pre-requisites:
-
-*  [Python](https://www.python.org/download/releases/3.0/)
-*  [PostgreSQL](https://www.postgresql.org/download/)
-*  uWSGI (optional, but recommended if running in production)
-
-
-## Requirements:
-```
-pip install -r requirements.txt
-```
-
-## Config:
-
-Edit [config.py](jeffcupdb/config.py) with your own:
-*  Enter your database credentials in `envvars-{dev|prod}`.
-*  Set the name, host, and port of the database you are using in `envvars-{dev|prod}`
-*  `LEAGUE_ID`
-*  `swid` (private leagues)
-*  `espn_s2` (private leagues)
-  
-To find your `swid` and `espn_s2` in Chrome, go to **DevTools > Application > Cookies >** https://fantasy.espn.com.
-
-## Setup:
-```
-source envvars-{dev|prod} && python -m jeffcupdb.initialize
-```
-
-## Run:
-```
-# run with python
-python -m jeffcupdb.app
-
-# run with uwsgi (not verified)
-uwsgi --http 0.0.0.0:5000 --ini conf/jeffcupdb-{dev|prod}.ini
-```
-
-## Update:
-```
-python -m jeffcupdb.db.update
-```
 
