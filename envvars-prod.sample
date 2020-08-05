@@ -1,0 +1,13 @@
+export LEAGUE_ID=52048
+export CURRENT_YEAR=2019
+export COOKIE_SWID=<swid>
+export COOKIE_ESPN_S2=<espn2_s2>
+
+export DB_USER="dbuser"
+export DB_PASSWORD=""
+export DB_HOST="localhost"
+export DB_PORT="5432"
+export DB_NAME="postgres"
+
+export CONFIG_DIR="/etc/opt/jeffcupdb"
+export LOG_BASE_DIR="/var/log/jeffcupdb"
