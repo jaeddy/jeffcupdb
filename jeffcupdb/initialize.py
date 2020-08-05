@@ -18,7 +18,7 @@ def parse_args() -> Mapping:
 
 
 def main():
-    args = parse_args()
+    # args = parse_args()
     app.config.from_object(util.get_config())
 
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
