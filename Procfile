@@ -1,2 +1,2 @@
 web: gunicorn jeffcupdb.app:app
-release: `python -m jeffcupdb.setup`
+release: `python -m jeffcupdb.initialize`
