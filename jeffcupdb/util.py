@@ -6,8 +6,6 @@ import re
 from typing import Type
 
 REGULAR_SEASON = "regular"
-Recap = namedtuple('Recap', ['team', 'team_record', 'opponent', 'opponent_record', 'streak', 'streak_owner',
-                             'h2h_record', 'body'])
 
 
 def get_is_playoffs(matchup_type):
