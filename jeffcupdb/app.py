@@ -7,12 +7,9 @@ from jeffcupdb.db.model.records import Records
 from jeffcupdb.db.model.sackos import Sackos
 from jeffcupdb.db.model.teams import Teams
 from jeffcupdb.db.query import Query
-from jeffcupdb.views.awards import awards
 from jeffcupdb.views.champions import champions
 from jeffcupdb.views.h2h_records import h2h_records
 from jeffcupdb.views.matchup_history import matchup_history
-from jeffcupdb.views.playoffs import playoffs
-from jeffcupdb.views.recap import recap
 from jeffcupdb.views.standings import standings
 from flask import Flask, redirect
 import logging
@@ -22,12 +19,9 @@ LOG_FORMAT = "%(asctime)s %(levelname)s %(pathname)s %(lineno)d: %(message)s"
 
 app = Flask(__name__)
 app.config.from_object(util.get_config())
-app.register_blueprint(awards)
 app.register_blueprint(champions)
 app.register_blueprint(h2h_records)
 app.register_blueprint(matchup_history)
-app.register_blueprint(playoffs)
-app.register_blueprint(recap)
 app.register_blueprint(standings)
 app.static_folder = "web/static"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -54,7 +48,7 @@ def setup_logging():
 
 @app.route('/', methods=['GET'])
 def show_index():
-    return redirect("/awards", code=302)
+    return redirect("/standings/overall", code=302)
 
 
 if __name__ == "__main__":
