@@ -6,4 +6,3 @@ The Jefferson Cup is a long running fantasy league among UVA alumns and friends.
 
 *This repo will be evolving dramatically over the next several weeks/months — better documentation for usage and contribution should follow.*
 
-
